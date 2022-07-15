@@ -1,0 +1,99 @@
+{%extends 'webbase.html'%}
+{% block title %}
+  Welcome!
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">End-of-the-day Dietary Analysis</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+    </div>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="Home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/LifestyleDiseases">Lifestyle Diseases</a> 
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/BMI">Body Mass Index</a> 
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Meals">Healthy Diet</a> 
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/DoctorsNearby">Professionals</a> 
+        </li>
+    </ul>
+</nav>
+
+
+<!-- Webpage begins here -->
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 bg-dark"  style="color:white">
+    <div class="col-md-5 p-lg-5 mx-auto my-1">
+ <style> 
+    body {
+      font-family:c; 
+      text-align: left; 
+    }
+    </style>   
+    <h1 class="display-4 font-weight-normal text-center">Meet Diet Bot</h1> 
+    <p class="lead font-weight-normal" style="text-align:left"><img src="{{ url_for('static', filename='images/webbase-bot.gif') }}"
+        style="float:right">Begin your journey to analyze your diet at home!</p>
+    <p class="lead font-weight-normal">Click on the icon at the bottom right to interact</p>
+    <a class="btn btn-primary" href= "{{ url_for('lifedfacts_page') }}">Let's Get Started</a>
+  </div>
+  <div class="product-device box-shadow d-none d-md-block"></div>
+  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+ 
+
+      </div>
+
+<!-- Chatbot begins here -->
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div
+class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="{{ url_for('static', filename='images/cbot.png') }}">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Diet Bot</h4>
+                    <p class="chatbox__description--header">Hi there! Can't wait to assist, influence, and inform you positively.</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button style="background-color: #343a40; border:solid 2px #008080; margin-bottom: -0.8cm; margin-right: -0.4cm;">
+                <img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"/>
+            </button>
+        </div>
+    </div>
+</div> 
+  <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+  </script>
+  
+  <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+ 
+<!--Webpage background -->
+ <style>
+        body {
+        background-image: url("static/images/webbase-icon.jpg");
+        background-size: 100vh;
+        background-repeat: repeat;
+        }
+    </style> 
+{% endblock %}
