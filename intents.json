@@ -1,0 +1,94 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "What's up?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey, how are you?",
+        "Hello there user, how are you?",
+        "Hi there, how are you?"
+      ]
+    },
+    {
+      "tag": "dismissal",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "Goodbye! Remember to take care of your health."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "posday",
+      "patterns": [
+        "Amazing",
+        "Good",
+        "Fine",
+        "Okay"
+      ],
+      "responses": [
+        "I am elated to hear! So let's begin. How many of the three main meals have you had?"
+      ]
+    },
+    {
+      "tag": "negday",
+      "patterns": [
+        "not great",
+        "bad",
+        "sad",
+        "had better days"
+      ],
+      "responses": [
+        "Oh no! Everyday is a new opportunity to make amends. So let's begin. How many of the three main meals have you had?"
+      ]
+    },
+    {
+      "tag": "meal",
+      "patterns": [
+        "one",
+        "1",
+        "two",
+        "2"
+      ],
+      "responses": [
+        "Alright, atleast you ate. Do better tomorrow and try to have all the meals. Click on the 'Life Style Diseases' tab on the upper right. We will meet again later."
+      ]
+    },
+    {
+      "tag": "meal3",
+      "patterns": [
+        "all",
+        "three",
+        "3"
+      ],
+      "responses": [
+        "Excellent, we're off to a great start! Click on the 'Life Style Diseases' tab on the upper right. We will meet again later."
+      ]
+    },
+    {
+      "tag": "meal0",
+      "patterns": [
+        "none",
+        "0",
+        "zero",
+        "I did not eat today"
+      ],
+      "responses": [
+        "That's not good for your health in any way! Eat your food! Click on the 'Life Style Diseases' tab on the upper right. We will meet again later."
+      ]
+    }
+  ]
+}
